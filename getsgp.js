@@ -1,5 +1,11 @@
-import express from "express";
 import puppeteer from "puppeteer";
+import { executablePath } from "puppeteer";
+
+const browser = await puppeteer.launch({
+  executablePath: "/usr/bin/chromium",
+  headless: "new",
+  args: ["--no-sandbox", "--disable-setuid-sandbox"]
+});
 
 const app = express();
 const PORT = process.env.PORT || 3000;
