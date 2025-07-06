@@ -9,7 +9,8 @@ app.use(express.static("public"));
 app.get("/api/sgp4d", async (req, res) => {
   try {
     const browser = await puppeteer.launch({
-  args: ['--no-sandbox', '--disable-setuid-sandbox']
+  headless: "new",
+  args: ["--no-sandbox", "--disable-setuid-sandbox"]
 });
     const page = await browser.newPage();
     await page.goto("https://www.singaporepools.com.sg/en/product/Pages/4d_results.aspx", {
