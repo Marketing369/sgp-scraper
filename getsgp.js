@@ -46,8 +46,4 @@ app.get("/api/sgp4d", async (req, res) => {
     res.status(500).json({ error: "Gagal mengambil data" });
   }
 });
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running at http://0.0.0.0:${PORT}/api/sgp4d`);
-});
-
+app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}/api/sgp4d`));
