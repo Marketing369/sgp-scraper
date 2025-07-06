@@ -1,0 +1,14 @@
+{
+  "name": "sgp-scraper",
+  "version": "1.0.0",
+  "description": "Live SGP 4D Result Scraper using Puppeteer",
+  "main": "getsgp.js",
+  "type": "module",
+  "scripts": {
+    "start": "node getsgp.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^21.3.8"
+  }
+}
